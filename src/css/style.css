@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  /* background: #fffefe; */
+  color: white;
+}
+.my{
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+  
+@media (max-width: 400px) {
+ .my{
+    margin-top: 10px;
+    padding-top: 1rem;
+}
+
+}
+
+.bg-animation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  color: cyan;
+}
+
+.brand { color: cyan; }
+.dot { color: #999; }
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  font-family: monospace;
+}
+
+nav ul li a, nav ul li button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li button:hover,
+nav ul li a:hover {
+  color: cyan;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 60px;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+.toggle-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.toggle-section h2 {
+  color: cyan;
+  margin-bottom: 20px;
+  font-family: monospace;
+}
+
+.skills-container, .project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-container img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+
+.skills-container img:hover {
+  transform: scale(1.1);
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: cyan;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-links a:hover {
+  background-color: #00d2d3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .skills-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .project-links a {
+    margin-bottom: 10px;
+  }
+}
+
+
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
